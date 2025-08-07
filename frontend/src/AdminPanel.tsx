@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { User, Sheet } from '../types';
 
 export const AdminPanel = ({ token }: { token: string }) => {
   const [users, setUsers] = useState([]);
