@@ -35,8 +35,8 @@
 ### 1. Клонируй репозиторий
 
 ```bash
-git clone https://github.com/yourname/mini-excel.git
-cd mini-excel
+git clone https://github.com/denis-on/min-exel.git
+cd min-exel
 ```
 
 ### 2. Создай .env файл
