@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { User, Sheet } from '../types';
+import { User, Sheet } from './types';
 
 export const AdminPanel = ({ token }: { token: string }) => {
-  const [users, setUsers] = useState([]);
-  const [sheets, setSheets] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
+  const [sheets, setSheets] = useState<Sheet[]>([]);
 
   useEffect(() => {
     axios.get("/api/users", { headers: { Authorization: `Bearer ${token}` } })
       .then(res => setUsers(res.data));
     axios.get("/api/sheets", { headers: { Authorization: `Bearer ${token}` } })
       .then(res => setSheets(res.data));
-  }, []);
+  }, [token]);
 
   return (
     <div>
