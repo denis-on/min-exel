@@ -1,0 +1,18 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #111;
+  --border: #ccc;
+}
+
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --border: #444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: sans-serif;
+}
