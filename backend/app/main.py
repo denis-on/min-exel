@@ -4,7 +4,7 @@ from passlib.hash import bcrypt
 
 from app.database import Base, engine, SessionLocal
 from app.routes import users, sheets, rows
-from app.models.user import User
+from app.models import User
 
 # Создание таблиц
 Base.metadata.create_all(bind=engine)
