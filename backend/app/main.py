@@ -16,7 +16,7 @@ def create_default_admin():
     if not existing_admin:
         admin_user = User(
             username="admin",
-            hashed_password=bcrypt.hash("admin"),
+            password_hash=bcrypt.hash("admin"),
             role="admin"
         )
         db.add(admin_user)
