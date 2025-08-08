@@ -6,7 +6,7 @@ export const Login = ({ onLogin }: { onLogin: (token: string) => void }) => {
   const [password, setPassword] = useState("");
 
   const login = async () => {
-    const res = await axios.post("/api/users/login", { username, password });
+    const res = await axios.post("/api/login", { username, password });
     onLogin(res.data.access_token);
   };
 
